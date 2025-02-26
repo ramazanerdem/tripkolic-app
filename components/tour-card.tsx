@@ -125,13 +125,13 @@ export default function TourCard({ tour }: TourCardProps) {
         <div className="flex justify-between items-center mt-2">
           <div className="flex flex-col">
             <span className="text-red-500 line-through text-sm">
-              THB {tour.price}
+              TRY {tour.price}
             </span>
-            <div className="text-xl font-bold text-primary-500">
-              THB {tour.discountedPrice}
+            <div className="text-lg font-bold text-primary-500">
+              TRY {tour.discountedPrice}
             </div>
           </div>
-          <button className="bg-primary-500 text-white px-4 py-2 rounded-lg font-bold hover:bg-primary-600 transition-colors">
+          <button className="bg-primary-500 text-white px-4 py-2 rounded-lg md:text-sm font-bold hover:bg-primary-600 transition-colors">
             Hemen Rezerve Et
           </button>
         </div>

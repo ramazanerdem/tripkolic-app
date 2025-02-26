@@ -233,7 +233,10 @@ export default function FilterModal({
             {/* Price Range */}
             <div>
               <div className="">
-                <label className="font-medium">Price</label>
+                <div className="flex items-center justify-between">
+                  <label className="font-medium">Price</label>
+                  <p className="text-gray-400 text-sm">(max)</p>
+                </div>
                 <input
                   type="range"
                   min="0"
@@ -247,7 +250,10 @@ export default function FilterModal({
 
               {/* Group Size */}
               <div className="">
-                <label className="font-medium">Group size</label>
+                <div className="flex items-center justify-between">
+                  <label className="font-medium">Group size</label>
+                  <p className="text-gray-400 text-sm">(max)</p>
+                </div>
                 <input
                   type="range"
                   min="1"
@@ -287,7 +293,7 @@ export default function FilterModal({
             </div>
 
             {/* Action Buttons */}
-            <div className="flex gap-4 pb-4">
+            <div className="flex gap-4">
               <button
                 onClick={() => {
                   setLocation('')

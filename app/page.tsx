@@ -87,7 +87,7 @@ export default function Home() {
   })
 
   return (
-    <main className="min-h-screen bg-gray-50">
+    <main className="min-h-screen max-w-screen-xl mx-auto ">
       <Navbar onFilterClick={() => setIsFilterOpen(true)} />
 
       <FilterModal
@@ -97,7 +97,7 @@ export default function Home() {
         onApply={handleFilterApply}
       />
 
-      <div className="container mx-auto px-4 py-8">
+      <div className="mx-auto px-4 py-2">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {filteredTours.map((tour) => (
             <TourCard key={tour.id} tour={tour} />

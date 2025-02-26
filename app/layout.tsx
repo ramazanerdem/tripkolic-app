@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${kanit.variable} antialiased`}>
+      <body className={`${kanit.variable} antialiased bg-gray-50`}>
         <FavoriteProvider>{children}</FavoriteProvider>
       </body>
     </html>
