@@ -2,12 +2,12 @@
 
 import { useState } from 'react'
 import { X } from 'lucide-react'
-
+import { FilterOptions } from '@/types/type'
 interface FilterModalProps {
   isOpen: boolean
   onClose: () => void
   category: string
-  onApply: (filters: any) => void
+  onApply: (filters: FilterOptions) => void
 }
 
 export default function FilterModal({
@@ -39,7 +39,7 @@ export default function FilterModal({
     Transfer: ['Airport', 'Hotel', 'Port'],
   }
 
-  const allThemes = Object.values(themes).flat()
+  // const allThemes = Object.values(themes).flat()
   const allVehicles = Object.values(vehicles).flat()
 
   const activities = [

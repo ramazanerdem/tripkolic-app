@@ -6,7 +6,7 @@ import TourCard from '@/components/tour-card'
 import Navbar from '@/components/navbar'
 import tours from '@/lib/data.json'
 import FavoritesModal from '@/components/favorites-modal'
-
+import { FilterOptions } from '@/types/type'
 export default function Home() {
   const [isFilterOpen, setIsFilterOpen] = useState(false)
   const [selectedCategory, setSelectedCategory] = useState('Tours')
@@ -28,7 +28,7 @@ export default function Home() {
     groupSize: 100,
   })
 
-  const handleFilterApply = (filters: any) => {
+  const handleFilterApply = (filters: FilterOptions) => {
     setSelectedCategory(filters.category || 'Tours')
     setSelectedFilters({
       location: filters.location || '',

@@ -1,16 +1,5 @@
 import Image from 'next/image'
-import {
-  Heart,
-  Locate,
-  Users,
-  Tag,
-  Car,
-  Sailboat,
-  Ticket,
-  MapPin,
-  Ruler,
-  CalendarDays,
-} from 'lucide-react'
+import { Heart, Users, Car, MapPin } from 'lucide-react'
 import { useFavorites } from '@/context/FavoriteContext'
 
 interface TourCardProps {
@@ -35,21 +24,6 @@ interface TourCardProps {
 
 export default function TourCard({ tour }: TourCardProps) {
   const { favorites, toggleFavorite } = useFavorites()
-
-  const getCategoryIcon = () => {
-    switch (tour.category) {
-      case 'Tours':
-        return <MapPin className="w-4 h-4" />
-      case 'Rent':
-        return <Car className="w-4 h-4" />
-      case 'Transfer':
-        return <Sailboat className="w-4 h-4" />
-      case 'Tickets':
-        return <Ticket className="w-4 h-4" />
-      default:
-        return <Tag className="w-4 h-4" />
-    }
-  }
 
   return (
     <div className="bg-white text-black rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
